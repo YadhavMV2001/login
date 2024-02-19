@@ -15,7 +15,7 @@ class LoginScreen extends StatelessWidget {
         decoration: BoxDecoration(
           image: DecorationImage(
               image: NetworkImage(
-                  "https://images.pexels.com/photos/4207776/pexels-photo-4207776.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"),
+                  "https://cdn.dribbble.com/users/11473200/screenshots/19912759/media/7753309af4f3f3cef2e0ad109592706b.png?resize=1000x750&vertical=center"),
               fit: BoxFit.cover),
         ),
         child: Center(

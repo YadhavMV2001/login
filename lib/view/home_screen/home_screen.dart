@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
 
@@ -16,6 +16,7 @@ class HomeScreen extends StatelessWidget {
         actions: [
           CircleAvatar(
             radius: 20,
+            backgroundImage: AssetImage("assets/YADHAV.jpg"),
           ),
           SizedBox(
             width: 20,
@@ -45,7 +46,13 @@ class HomeScreen extends StatelessWidget {
               style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
             ),
             Row(
-              children: [Icon(Icons.remove_red_eye), Text("Current Balance")],
+              children: [
+                Icon(Icons.remove_red_eye_outlined),
+                SizedBox(
+                  width: 10,
+                ),
+                Text("Current Balance")
+              ],
             ),
             Row(
               children: [
@@ -54,7 +61,7 @@ class HomeScreen extends StatelessWidget {
                   height: 50,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Colors.purple,
+                    color: const Color.fromARGB(255, 212, 176, 253),
                   ),
                   child: Icon(Icons.add),
                 ),
@@ -65,7 +72,7 @@ class HomeScreen extends StatelessWidget {
                     height: 50,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Colors.purple,
+                      color: const Color.fromARGB(255, 212, 176, 253),
                     ),
                     child: Icon(Icons.arrow_forward),
                   ),
@@ -75,7 +82,7 @@ class HomeScreen extends StatelessWidget {
                   height: 50,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Colors.purple,
+                    color: const Color.fromARGB(255, 241, 230, 253),
                   ),
                   child: Center(child: Text("Split a purchase")),
                 ),
@@ -89,10 +96,11 @@ class HomeScreen extends StatelessWidget {
               padding: const EdgeInsets.only(top: 10),
               child: Container(
                 width: 400,
-                height: 60,
+                height: 70,
                 decoration: BoxDecoration(border: Border.all()),
                 child: ListTile(
-                  leading: Text("image"),
+                  leading: Image(
+                      image: AssetImage("assets/yadh.jpg"), fit: BoxFit.cover),
                   title: Text(
                     "NIKE SHOP",
                     style: TextStyle(fontSize: 20),
@@ -109,10 +117,13 @@ class HomeScreen extends StatelessWidget {
               padding: const EdgeInsets.only(top: 10),
               child: Container(
                 width: 400,
-                height: 60,
+                height: 70,
                 decoration: BoxDecoration(border: Border.all()),
                 child: ListTile(
-                  leading: Text("image"),
+                  leading: Image(
+                    image: AssetImage("assets/12345.jpeg"),
+                    fit: BoxFit.cover,
+                  ),
                   title: Text(
                     "STARBUCKS",
                     style: TextStyle(fontSize: 20),
@@ -129,24 +140,27 @@ class HomeScreen extends StatelessWidget {
               padding: const EdgeInsets.only(top: 10),
               child: Container(
                 width: 400,
-                height: 60,
+                height: 70,
                 decoration: BoxDecoration(border: Border.all()),
                 child: ListTile(
-                  leading: Text("image"),
+                  leading: Image(
+                    image: AssetImage("assets/123.jpg"),
+                    fit: BoxFit.cover,
+                  ),
                   title: Text(
                     "Anna Johnson",
                     style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
-                        color: Colors.purple),
+                        color: Color.fromARGB(255, 123, 35, 139)),
                   ),
                   subtitle: Text("17 Oct"),
                   trailing: Container(
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(50),
-                        color: Colors.purple),
+                        color: Color.fromARGB(255, 241, 230, 253)),
                     child: Text(
-                      "-62.094",
+                      "-50,00",
                       style: TextStyle(fontSize: 15),
                     ),
                   ),
@@ -157,17 +171,52 @@ class HomeScreen extends StatelessWidget {
               padding: const EdgeInsets.only(bottom: 10, top: 10),
               child: Container(
                 width: 400,
-                height: 60,
+                height: 70,
                 decoration: BoxDecoration(border: Border.all()),
                 child: ListTile(
-                  leading: Text("image"),
+                  leading: Image(
+                    image: AssetImage("assets/1.jpeg"),
+                    fit: BoxFit.cover,
+                  ),
                   title: Text(
-                    "NIKE SHOP",
+                    "From SAVINGS",
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  subtitle: Text("17 Oct"),
+                  trailing: Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        color: const Color.fromARGB(255, 241, 230, 253)),
+                    child: Text(
+                      "25,00",
+                      style: TextStyle(fontSize: 15),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Text(
+              "Recent events",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 10),
+              child: Container(
+                width: 400,
+                height: 70,
+                decoration: BoxDecoration(border: Border.all()),
+                child: ListTile(
+                  leading: Image(
+                    image: AssetImage("assets/12.png"),
+                    fit: BoxFit.cover,
+                  ),
+                  title: Text(
+                    "McDonald's",
                     style: TextStyle(fontSize: 20),
                   ),
                   subtitle: Text("17 Oct"),
                   trailing: Text(
-                    "-62.094",
+                    "-12,37",
                     style: TextStyle(fontSize: 15),
                   ),
                 ),
@@ -176,6 +225,36 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(items: [
+        BottomNavigationBarItem(
+            icon: Icon(
+              Icons.home_outlined,
+              size: 30,
+              color: Colors.black,
+            ),
+            label: ""),
+        BottomNavigationBarItem(
+            icon: Icon(
+              Icons.sms_outlined,
+              size: 30,
+              color: Colors.black,
+            ),
+            label: ""),
+        BottomNavigationBarItem(
+            icon: Icon(
+              Icons.notifications_outlined,
+              size: 30,
+              color: Colors.black,
+            ),
+            label: ""),
+        BottomNavigationBarItem(
+            icon: Icon(
+              Icons.pie_chart_outline,
+              size: 30,
+              color: Colors.black,
+            ),
+            label: ""),
+      ]),
     );
   }
 }
