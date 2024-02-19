@@ -41,9 +41,18 @@ class HomeScreen extends StatelessWidget {
                 Icon(Icons.expand_more)
               ],
             ),
-            Text(
-              "13.458 ",
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+            Row(
+              children: [
+                Text(
+                  "13.458 ",
+                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                ),
+                Icon(
+                  Icons.attach_money,
+                  size: 30,
+                  weight: 500,
+                ),
+              ],
             ),
             Row(
               children: [
@@ -99,8 +108,12 @@ class HomeScreen extends StatelessWidget {
                 height: 70,
                 decoration: BoxDecoration(border: Border.all()),
                 child: ListTile(
-                  leading: Image(
-                      image: AssetImage("assets/yadh.jpg"), fit: BoxFit.cover),
+                  leading: Container(
+                      width: 55,
+                      height: 50,
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage("assets/yadh.jpg")))),
                   title: Text(
                     "NIKE SHOP",
                     style: TextStyle(fontSize: 20),
@@ -120,10 +133,12 @@ class HomeScreen extends StatelessWidget {
                 height: 70,
                 decoration: BoxDecoration(border: Border.all()),
                 child: ListTile(
-                  leading: Image(
-                    image: AssetImage("assets/12345.jpeg"),
-                    fit: BoxFit.cover,
-                  ),
+                  leading: Container(
+                      width: 55,
+                      height: 50,
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage("assets/12345.jpeg")))),
                   title: Text(
                     "STARBUCKS",
                     style: TextStyle(fontSize: 20),
@@ -143,10 +158,12 @@ class HomeScreen extends StatelessWidget {
                 height: 70,
                 decoration: BoxDecoration(border: Border.all()),
                 child: ListTile(
-                  leading: Image(
-                    image: AssetImage("assets/123.jpg"),
-                    fit: BoxFit.cover,
-                  ),
+                  leading: Container(
+                      width: 55,
+                      height: 50,
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage("assets/123.jpg")))),
                   title: Text(
                     "Anna Johnson",
                     style: TextStyle(
@@ -174,10 +191,13 @@ class HomeScreen extends StatelessWidget {
                 height: 70,
                 decoration: BoxDecoration(border: Border.all()),
                 child: ListTile(
-                  leading: Image(
-                    image: AssetImage("assets/1.jpeg"),
-                    fit: BoxFit.cover,
-                  ),
+                  leading: Container(
+                      width: 55,
+                      height: 50,
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage("assets/1.jpeg"),
+                              fit: BoxFit.fitHeight))),
                   title: Text(
                     "From SAVINGS",
                     style: TextStyle(fontSize: 20),
@@ -206,10 +226,12 @@ class HomeScreen extends StatelessWidget {
                 height: 70,
                 decoration: BoxDecoration(border: Border.all()),
                 child: ListTile(
-                  leading: Image(
-                    image: AssetImage("assets/12.png"),
-                    fit: BoxFit.cover,
-                  ),
+                  leading: Container(
+                      width: 55,
+                      height: 50,
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage("assets/12.png")))),
                   title: Text(
                     "McDonald's",
                     style: TextStyle(fontSize: 20),
